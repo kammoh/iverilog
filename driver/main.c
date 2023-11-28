@@ -21,6 +21,11 @@ const char COPYRIGHT[] =
 # include "version_base.h"
 # include "version_tag.h"
 
+#ifdef __APPLE__
+#include <mach-o/dyld.h>
+#include <sys/syslimits.h>
+#endif  /* __APPLE__ */
+
 const char NOTICE[] =
 "  This program is free software; you can redistribute it and/or modify\n"
 "  it under the terms of the GNU General Public License as published by\n"
